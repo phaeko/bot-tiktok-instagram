@@ -3,8 +3,10 @@ import random
 import shutil
 import instaloader
 
-# Cria uma instância do Instaloader
+# Cria uma instância do Instaloader com um user agent personalizado
+user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 loader = instaloader.Instaloader()
+loader.context.user_agent = user_agent
 
 def download_instagram(post_url, context, chat_id):
     try:
